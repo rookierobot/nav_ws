@@ -1,0 +1,13 @@
+# .gitignore 文件内容
+build/
+build_isolated/
+devel/
+devel_isolated/
+*.log
+*.bak
+.rosinstall
+.catkin_tools
+src/sentry_tools/
+src/test_sophus/
+src/mapfile/
+1008/

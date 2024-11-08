@@ -1,0 +1,17 @@
+<launch>
+  <!-- 传递模型参数 -->
+  <arg name="model" />
+  <param name="robot_description" textfile="$(find h1_description)/urdf/h1.urdf" />
+
+  <!-- 加载关节状态发布器 -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <!-- 加载机器人状态发布器 -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <!-- 启动 body_transform_node -->
+  <node name="body_transform_node" pkg="body_transform" type="body_transform_node" />
+
+  <!-- 启动 livox_to_pointcloud2 -->
+  <node name="livox_to_pointcloud2" pkg="livox_to_pointcloud2" type="livox_to_pointcloud2" />
+</launch>
